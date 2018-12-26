@@ -1,0 +1,11 @@
+[package]
+name = "adventofcode2018"
+version = "0.1.0"
+authors = ["Simeon Visser <svisser@users.noreply.github.com>"]
+edition = "2018"
+
+[[bin]]
+name = "advent01"
+path = "src/01/main.rs"
+
+[dependencies]
