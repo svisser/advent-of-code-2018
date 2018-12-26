@@ -16,3 +16,9 @@ For example:
 ```
 cargo run --bin advent01
 ```
+
+A filepath can be passed for some solutions:
+
+```
+cargo run --bin advent03 -- src/03/input.txt
+```
