@@ -8,4 +8,8 @@ edition = "2018"
 name = "advent01"
 path = "src/01/main.rs"
 
+[[bin]]
+name = "advent02"
+path = "src/02/main.rs"
+
 [dependencies]
