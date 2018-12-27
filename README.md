@@ -22,3 +22,9 @@ A filepath can be passed for some solutions:
 ```
 cargo run --bin advent03 -- src/03/input.txt
 ```
+
+Some solutions also have tests:
+
+```
+cargo test --bin advent05
+```
