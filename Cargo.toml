@@ -16,6 +16,10 @@ path = "src/02/main.rs"
 name = "advent03"
 path = "src/03/main.rs"
 
+[[bin]]
+name = "advent04"
+path = "src/04/main.rs"
+
 [dependencies]
 lazy_static = "1.2.0"
 regex = "1.1.0"
