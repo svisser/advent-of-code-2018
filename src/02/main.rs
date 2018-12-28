@@ -23,10 +23,7 @@ fn process_box_id(box_id: &str) -> IdentifierAnalysis {
             has_three = true;
         }
     }
-    IdentifierAnalysis {
-        has_two: has_two,
-        has_three: has_three,
-    }
+    IdentifierAnalysis { has_two, has_three }
 }
 
 fn calculate_checksum(analyses: Vec<IdentifierAnalysis>) -> u32 {
@@ -40,7 +37,7 @@ fn calculate_checksum(analyses: Vec<IdentifierAnalysis>) -> u32 {
             three_count += 1;
         }
     }
-    (two_count * three_count) as u32
+    u32::from(two_count * three_count)
 }
 
 // abcdef,bababc,abbcde,abcccd,aabcdd,abcdee,ababab
@@ -51,7 +48,7 @@ fn main() {
     match io::stdin().read_line(&mut input) {
         Ok(_) => {
             let analyses: Vec<IdentifierAnalysis> = input
-                .split(",")
+                .split(',')
                 .map(|box_id| process_box_id(box_id.trim()))
                 .collect();
             println!("Checksum: {}", calculate_checksum(analyses));
